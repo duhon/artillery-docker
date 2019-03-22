@@ -1,10 +1,10 @@
-FROM node:8-alpine
+FROM node:alpine
 MAINTAINER Hassy Veldstra <h@artillery.io>
 
 VOLUME /artillery
 WORKDIR /artillery
 
-RUN npm install -g artillery@1.6.0-2
+RUN npm install -g artillery --unsafe-perm
 
 ENTRYPOINT ["artillery"]
 CMD ["--help"]
